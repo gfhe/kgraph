@@ -1,2 +1,8 @@
 *.so
 *.o
+build/
+dist/
+index/
+sift1m/
+deep1B/
+*.egg-info

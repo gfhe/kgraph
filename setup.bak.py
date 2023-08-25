@@ -21,7 +21,7 @@ libraries = [
         'openblas',
         'gomp']
 
-ext = Extension('pykgraph',
+ext = Extension('kgraph',
         language = 'c++',
         extra_compile_args = ['-DGIT_COMMIT=%s' % git_commit, '-DUSE_BLAS=1', '-std=c++17', '-O3', '-g', '-Wno-sign-compare', '-Wno-parentheses', '-DDEBUG', '-Wno-narrowing', '-Wno-attributes', '-Wno-unknown-pragmas', '-fopenmp', '-march=native'], 
         include_dirs = include_dirs,
@@ -30,7 +30,7 @@ ext = Extension('pykgraph',
         sources = ['python-api.cpp', 'kgraph.cpp']
         )
 
-setup (name = 'pykgraph',
+setup (name = 'kgraph',
        version = '0.0.1',
        author = 'heguangfu',
        author_email = 'hgf@mail.io',
